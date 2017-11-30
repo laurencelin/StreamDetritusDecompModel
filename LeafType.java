@@ -55,8 +55,8 @@ public class LeafType implements Serializable{
         pc = lt.pc;
     }
     
-	public String toString(double cDensity){return cDensity+","+cDensity*nc+","+cDensity*pc;}
-	public void toAll(double cDensity, double[][] holder){
+    public String toString(double cDensity){return cDensity+","+cDensity*nc+","+cDensity*pc;}
+    public void toAll(double cDensity, double[][] holder){
 		//[C,N,P][0:lig, 1:dead, 2:cell, 3:other, 4:leach]
         
         //C
@@ -69,6 +69,6 @@ public class LeafType implements Serializable{
         holder[2][0]=cDensity*ligninPprop; holder[2][1]=0; holder[2][2]=cDensity*cellulosePprop;
         holder[2][3]=cDensity*otherPprop; holder[2][4]=cDensity*leachPprop;
         
-	}
+   }//end of function
 	
 }
